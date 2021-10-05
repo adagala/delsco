@@ -5,7 +5,8 @@ module.exports = {
     fontFamily: {
       'arial': ['Arial', 'ui-sans-serif'],
       'times-new-roman': ['Times New Roman', 'ui-serif'],
-      'roboto': ['Roboto', 'ui-sans-serif']
+      'roboto': ['Roboto', 'ui-sans-serif'],
+      lato: "'Lato', sans-serif"
     },
     extend: {},
   },
