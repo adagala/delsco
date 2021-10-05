@@ -48,15 +48,15 @@ const Home: NextPage = () => {
 
       <Popover className="relative bg-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex justify-between items-center border-b-2 border-red-900 py-3 md:justify-start md:space-x-10">
+          <div className="flex justify-between items-center border-b-2 border-red-900 py-2 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
                 <span className="sr-only">Delsco Enterprises</span>
                 <Image
                   src="/logo-performance.png"
                   alt="Delsco Enterprises Performance Logo"
-                  width={100}
-                  height={40}
+                  width={120}
+                  height={47}
                 />
               </a>
             </div>
@@ -155,8 +155,8 @@ const Home: NextPage = () => {
                     <Image
                       src="/logo-performance.png"
                       alt="Delsco Enterprises Performance Logo"
-                      width={154}
-                      height={60}
+                      width={120}
+                      height={47}
                     />
                   </div>
                   <div className="-mr-2">
