@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Home: NextPage = () => {
   return (
     <>
-      <main className="relative grid grid-cols-1 xl:grid-cols-5 h-full" style={{ backgroundColor: "#F6F6F6" }}>
+      <main className="xl:relative grid grid-cols-1 xl:grid-cols-5 h-full" style={{ backgroundColor: "#F6F6F6" }}>
         <div className="px-5 flex items-center col-span-2">
           <div className="w-full grid grid-cols-1 place-items-center text-4xl">
             <div className="text-center font-times-new-roman">
