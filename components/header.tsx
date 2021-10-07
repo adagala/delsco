@@ -46,11 +46,11 @@ const Header = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <style data-href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap">
+        <style data-href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Work+Sans:wght@500;700&display=swap">
         </style>
       </Head>
 
-      <Popover className="relative bg-red-900">
+      <Popover className="relative bg-red-900 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center border-b-2 border-red-900 py-2 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -79,9 +79,11 @@ const Header = () => {
                   Home
                 </a>
               </Link>
-              <a className="text-base font-medium text-white hover:text-gray-300">
-                About Us
-              </a>
+              <Link href="/about">
+                <a className="text-base font-medium text-white hover:text-gray-300">
+                  About Us
+                </a>
+              </Link>
               <Popover className="relative">
                 {({ open }) => (
                   <>
@@ -172,7 +174,7 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-red-900 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-900">
+                    <Popover.Button className="bg-red-900 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -180,19 +182,24 @@ const Header = () => {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-8">
-                    <Link href="/">
-                      <a
-                        key="Home"
-                        className="-m-3 px-3 py-1 flex items-center rounded-md">
-                        <span className="ml-3 text-base font-medium text-white">Home</span>
-                      </a>
-                    </Link>
-                    <a
-                      key="About Us"
-                      href="#"
-                      className="-m-3 px-3 py-1 flex items-center rounded-md">
-                      <span className="ml-3 text-base font-medium text-white">About Us</span>
-                    </a>
+                    <Popover.Button>
+                      <Link href="/">
+                        <a
+                          key="Home"
+                          className="-m-3 px-3 py-1 flex items-center rounded-md">
+                          <span className="ml-3 text-base font-medium text-white">Home</span>
+                        </a>
+                      </Link>
+                    </Popover.Button>
+                    <Popover.Button>
+                      <Link href="/about">
+                        <a
+                          key="About Us"
+                          className="-m-3 px-3 py-1 flex items-center rounded-md">
+                          <span className="ml-3 text-base font-medium text-white">About Us</span>
+                        </a>
+                      </Link>
+                    </Popover.Button>
                     <a
                       key="Services"
                       href="#"

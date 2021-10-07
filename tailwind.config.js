@@ -6,7 +6,8 @@ module.exports = {
       'arial': ['Arial', 'ui-sans-serif'],
       'times-new-roman': ['Times New Roman', 'ui-serif'],
       'roboto': ['Roboto', 'ui-sans-serif'],
-      lato: "'Lato', sans-serif"
+      'lato': ['Lato', 'sans-serif'],
+      'work-sans': ['Work Sans', 'sans-serif']
     },
     extend: {},
   },
