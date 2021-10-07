@@ -12,23 +12,23 @@ import {
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
-const solutions = [
+const services = [
   {
     name: 'Healthy Performance Management',
     description: 'for Great Performance',
-    href: '#',
+    href: '/performance',
     icon: ChartBarIcon,
   },
   {
     name: 'Staff Outsourcing',
     description: 'for Capacity Management and Seamless Quality of Service',
-    href: '#',
+    href: '/outsourcing',
     icon: CursorClickIcon,
   },
   {
     name: 'Learning and Skills Development',
     description: "Train, Coach and Support to achieve Great Performance",
-    href: '#',
+    href: '/development',
     icon: ViewGridIcon,
   },
 ]
@@ -46,7 +46,7 @@ const Header = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <style data-href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Work+Sans:wght@500;700&display=swap">
+        <style data-href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Work+Sans:wght@500;700&display=swap">
         </style>
       </Head>
 
@@ -115,18 +115,18 @@ const Header = () => {
                       <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-red-900 px-5 py-6 sm:gap-8 sm:p-8">
-                            {solutions.map((item) => (
-                              <a
-                                key={item.name}
-                                href={item.href}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-red-800"
-                              >
-                                <item.icon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
-                                <div className="ml-4">
-                                  <p className="text-base font-medium text-white">{item.name}</p>
-                                  <p className="mt-1 text-sm text-gray-200">{item.description}</p>
-                                </div>
-                              </a>
+                            {services.map((item) => (
+                              <Popover.Button key={item.name}>
+                                <Link key={item.name} href={item.href}>
+                                  <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-red-800">
+                                    <item.icon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
+                                    <div className="ml-4">
+                                      <p className="text-base font-medium text-white text-left">{item.name}</p>
+                                      <p className="mt-1 text-sm text-gray-200 text-left">{item.description}</p>
+                                    </div>
+                                  </a>
+                                </Link>
+                              </Popover.Button>
                             ))}
                           </div>
                         </div>
@@ -207,15 +207,15 @@ const Header = () => {
                       <span className="ml-3 text-base font-medium text-white">Services</span>
                     </a>
                     {
-                      solutions.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className="-m-3 ml-2 px-3 py-1 flex items-center rounded-md"
-                        >
-                          <item.icon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
-                          <span className="ml-3 text-base font-medium text-white">{item.name}</span>
-                        </a>
+                      services.map((item) => (
+                        <Popover.Button key={item.name}>
+                          <Link key={item.name} href={item.href}>
+                            <a key={item.name} className="-m-3 ml-2 px-3 py-1 flex items-center rounded-md">
+                              <item.icon className="flex-shrink-0 h-6 w-6 text-white" aria-hidden="true" />
+                              <span className="ml-3 text-base font-medium text-white">{item.name}</span>
+                            </a>
+                          </Link>
+                        </Popover.Button>
                       ))
                     }
                     <a
