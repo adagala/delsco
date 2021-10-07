@@ -20,7 +20,7 @@ const outsourcingLists = [
 const Outsourcing: NextPage = () => {
     return (
         <main className="flex flex-col-reverse px-5 xl:flex-row-reverse xl:h-full">
-            <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5">
+            <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                 <div>
                     <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
                         <div className="font-bold">
