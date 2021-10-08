@@ -136,10 +136,11 @@ const Header = () => {
                 )}
               </Popover>
 
-              <a href="#" className="text-base font-medium text-white hover:text-gray-300">
-                Contacts
-              </a>
-
+              <Link key="Contacts" href="/contacts">
+                <a className="text-base font-medium text-white hover:text-gray-300">
+                  Contacts
+                </a>
+              </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               &nbsp;
@@ -218,12 +219,15 @@ const Header = () => {
                         </Popover.Button>
                       ))
                     }
-                    <a
-                      key="Contacts"
-                      href="#"
-                      className="-m-3 px-3 py-1 flex items-center rounded-md">
-                      <span className="ml-3 text-base font-medium text-white">Contacts</span>
-                    </a>
+                    <Popover.Button key="Contacts">
+                      <Link key="Contacts" href="/contacts">
+                        <a
+                          key="Contacts"
+                          className="-m-3 px-3 py-1 flex items-center rounded-md">
+                          <span className="ml-3 text-base font-medium text-white">Contacts</span>
+                        </a>
+                      </Link>
+                    </Popover.Button>
                   </nav>
                 </div>
               </div>
