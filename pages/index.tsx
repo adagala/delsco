@@ -38,8 +38,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="px-5 w-full text-2xl xl:text-3xl font-medium mt-2 xl:absolute bottom-0 text-center xl:mt-0 xl:mb-2 font-lato">
-          We lead people with thoughts and feelings just like us
+        <div className="px-5 w-full text-2xl xl:text-3xl font-normal mt-2 xl:absolute bottom-0 text-center xl:mt-0 xl:mb-2 font-lato">
+          We lead people with <span className="font-extrabold text-3xl xl:text-4xl">thoughts</span> and <span className="font-extrabold text-3xl xl:text-4xl">feelings</span> just like us
         </div>
       </main>
     </>
