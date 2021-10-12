@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen bg-white">
       <Layout>
         <Component {...pageProps} />
       </Layout>
