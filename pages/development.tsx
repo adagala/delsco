@@ -1,31 +1,32 @@
 import { NextPage } from "next"
 import Image from 'next/image'
 import { CheckCircleIcon } from '@heroicons/react/solid'
+import { List } from "../models/List"
 
-const outsourcingLists = [
+const outsourcingLists: List[] = [
     {
-        name: 'Foundations of performance culture',
-        description: ' – It’s about thoughts, feelings, environments and systems'
+        title: 'Foundations of performance culture',
+        header: ' – It’s about thoughts, feelings, environments and systems'
     },
     {
-        name: 'Performance management practices for supervisor roles in the performance management',
-        description: ' – Designed and packaged under ‘Managing My Triangle’ to anchor foundations of healthy performance'
+        title: 'Performance management practices for supervisor roles in the performance management',
+        header: ' – Designed and packaged under ‘Managing My Triangle’ to anchor foundations of healthy performance'
     },
     {
-        name: 'Project Management',
-        description: ' – Transferring (localising) knowledge and skills for implementing in-house projects managing changes in the workplace'
+        title: 'Project Management',
+        header: ' – Transferring (localising) knowledge and skills for implementing in-house projects managing changes in the workplace'
     },
     {
-        name: 'Customer Service',
-        description: '  – The foundation for client interaction roles'
+        title: 'Customer Service',
+        header: '  – The foundation for client interaction roles'
     },
     {
-        name: 'Teller Services',
-        description: ' – Comprehensive, encompassing the processes & procedures, cash handling, risk management and code of ethics'
+        title: 'Teller Services',
+        header: ' – Comprehensive, encompassing the processes & procedures, cash handling, risk management and code of ethics'
     },
     {
-        name: 'Sales executives for frontline sales roles',
-        description: ''
+        title: <span>Sales executives <span className="font-normal">for frontline sales roles</span></span>,
+        header: ''
     }
 ]
 
@@ -38,7 +39,7 @@ const Development: NextPage = () => {
                         <div className="font-bold">
                             Learning and Skills Development
                         </div>
-                        <div className="mt-1 text-2xl xl:text-3xl">
+                        <div className="mt-1 text-2xl xl:text-3xl font-semibold">
                             Train, Coach and Support to achieve Great Performance
                         </div>
                     </div>
@@ -46,10 +47,10 @@ const Development: NextPage = () => {
                     <div className="mt-5 font-lato">
                         {
                             outsourcingLists.map((list) => (
-                                <div key={list.name} className="text-lg flex py-1">
+                                <div key={list.title} className="text-lg flex py-1">
                                     <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
                                     <div className="ml-3">
-                                        <span className="font-bold">{list.name}</span><span className="text-red-900 italic">{list.description}</span>
+                                        <span className="font-bold">{list.title}</span> <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
                                     </div>
                                 </div>
                             ))

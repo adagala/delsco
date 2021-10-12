@@ -1,18 +1,20 @@
 import { NextPage } from "next"
 import Image from 'next/image'
 import { CheckCircleIcon } from '@heroicons/react/solid'
+import { List } from "../models/List"
 
-const outsourcingLists = [
+const outsourcingLists: List[] = [
     {
-        name: 'Frontline Customer Service staff – Financial Service Tellers; Call Centre Operations',
+        title: 'Frontline Customer Service staff',
+        header: ' – Financial Service Tellers; Call Centre Operations',
         description: ' – (Development, maintenance of ready pool, performance monitoring & risk management for tellers)'
     },
     {
-        name: 'Back-office customer service support staff',
+        title: 'Back-office customer service support staff',
         description: ' – (Develop, maintain ready pool & performance monitoring)'
     },
     {
-        name: 'Sales staff',
+        title: 'Sales staff',
         description: ' – (Develop, maintain ready pool & performance monitoring)'
     }
 ]
@@ -26,7 +28,7 @@ const Outsourcing: NextPage = () => {
                         <div className="font-bold">
                             Staff Outsourcing
                         </div>
-                        <div className="mt-1 text-2xl xl:text-3xl">
+                        <div className="mt-1 text-2xl xl:text-3xl font-semibold">
                             for Capacity Management and Seamless Quality of Service
                         </div>
                     </div>
@@ -35,7 +37,7 @@ const Outsourcing: NextPage = () => {
                         <div className="font-bold">
                             One phone call maintains your customers satisfaction
                         </div>
-                        <div className="">
+                        <div className="font-semibold">
                             during peak periods and staff absenteeism; AND frees you from staff management and administration.
                         </div>
                     </div>
@@ -43,10 +45,10 @@ const Outsourcing: NextPage = () => {
                     <div className="mt-5 font-lato">
                         {
                             outsourcingLists.map((list) => (
-                                <div key={list.name} className="text-lg flex py-1">
+                                <div key={list.title} className="text-lg flex py-1">
                                     <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
                                     <div className="ml-3">
-                                        {list.name} <span className="text-red-900 italic">{list.description}</span>
+                                        {list.title} <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
                                     </div>
                                 </div>
                             ))

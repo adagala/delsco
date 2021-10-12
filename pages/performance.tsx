@@ -1,30 +1,38 @@
 import { NextPage } from "next"
 import Image from 'next/image'
 import { CheckCircleIcon } from '@heroicons/react/solid'
+import { List } from "../models/List"
 
-const performanceLists = [
+const performanceLists: List[] = [
     {
-        name: 'Strategic plan view',
+        title: 'Strategic plan review',
         description: ' - (Facilitation)'
     },
     {
-        name: 'Organisation business/operations model',
+        title: 'Organisation business/operations model',
         description: ' - (Facilitation)'
     },
     {
-        name: 'Job definitions– designed for healthy performance',
+        title: 'Job definitions',
+        header: '– designed for healthy performance',
         description: ' - (Facilitation)'
     },
     {
-        name: 'Project management - implementing changes and projects',
+        title: 'Cloud-based Performance Management System branded PMST',
+        header: ' – designed for efficiency and quality assurance',
+        description: ' - (Customisation, Training, Implementation, Maintenance)'
+    },
+    {
+        title: 'Project management',
+        header: ' - implementing changes and projects',
         description: ' - (Facilitation)'
     },
     {
-        name: 'Job Evalauation',
+        title: 'Job Evalauation',
         description: ' - (Facilitation)'
     },
     {
-        name: 'Salary structure review/development',
+        title: 'Salary structure review/development',
         description: ' - (Facilitation)'
     }
 ]
@@ -35,10 +43,10 @@ const Performance: NextPage = () => {
             <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                 <div>
                     <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
-                        <div className="font-bold">
+                        <div className="font-extrabold">
                             Healthy Performance Management
                         </div>
-                        <div className="mt-1 text-2xl xl:text-3xl">
+                        <div className="mt-1 text-2xl xl:text-3xl font-semibold">
                             for Great Performance
                         </div>
                     </div>
@@ -47,18 +55,18 @@ const Performance: NextPage = () => {
                         <div className="font-bold">
                             Tailor-made performance management solutions
                         </div>
-                        <div className="">
-                            for the critical stages of an organisation’s performance value-chain; aimed at enabling healthy work environment
+                        <div className="font-semibold">
+                            for the critical stages of an organisation’s performance management value-chain; <span className="italic">aimed at enabling a healthy work environment; and includes web-based performance management system.</span>
                         </div>
                     </div>
 
                     <div className="mt-5 font-lato">
                         {
-                            performanceLists.map((list) => (
-                                <div key={list.name} className="text-lg flex py-1">
+                            performanceLists.map((list, i) => (
+                                <div key={i} className="text-lg flex py-1">
                                     <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
                                     <div className="ml-3">
-                                        {list.name} <span className="text-red-900 italic">{list.description}</span>
+                                        {list.title} <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
                                     </div>
                                 </div>
                             ))
