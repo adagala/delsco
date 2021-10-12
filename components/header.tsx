@@ -9,6 +9,7 @@ import {
   MenuIcon,
   ViewGridIcon,
   XIcon,
+  SearchIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
@@ -31,6 +32,12 @@ const services = [
     href: '/development',
     icon: ViewGridIcon,
   },
+  {
+    name: 'Professional Audit',
+    description:  'of the Performance Management Value Chain',
+    href: '/audit',
+    icon: SearchIcon
+  }
 ]
 
 function classNames(...classes: string[]) {
