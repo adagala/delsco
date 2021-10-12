@@ -1,13 +1,33 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { ShieldCheckIcon } from '@heroicons/react/solid'
+import { BadgeCheckIcon } from '@heroicons/react/outline'
 
-const aboutList: string[] = [
-    'Established in Kenya in 2002',
-    'Has served several industries in Kenya and other countries in Eastern, Central and Western Africa',
-    'Solutions mapping onto the performance value chain',
-    'Leadership practices for healthy performance management',
-    'New cloud-based performance management tool that enables unique performer-supervisor engagement and incentives management'
+interface List {
+    description: any;
+    children?: List[];
+}
+const aboutList: List[] = [
+    {
+        description: 'Established in Kenya in 2002'
+    },
+    {
+        description: 'Have served several industries in Kenya and other countries in Eastern, Central and Western Africa'
+    },
+    {
+        description: 'New focus and developments',
+        children: [
+            {
+                description: <span><span className="font-extrabold">Solutions</span> for the performance management value chain</span>
+            },
+            {
+                description: <span><span className="font-extrabold">Performance</span> culture</span>
+            },
+            {
+                description: <span>Cloud-based <span className="font-extrabold">performance management system</span> that enables unique performer-supervisor engagement and incentives management</span>
+            }
+        ]
+    },
 ]
 
 const About: NextPage = () => {
@@ -26,11 +46,23 @@ const About: NextPage = () => {
                     <div className="mt-5">
                         {
                             aboutList.map((list) => (
-                                <div key={list} className="text-lg flex py-1">
-                                    <ShieldCheckIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
-                                    <div className="ml-3">
-                                        {list}
+                                <div key={list.description} >
+                                    <div className="text-lg flex py-1">
+                                        <ShieldCheckIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                        <div className="ml-3">
+                                            {list.description}
+                                        </div>
                                     </div>
+                                    {
+                                        list?.children && list?.children?.map((subList, i) => (
+                                            <div key={i} className="text-lg flex py-1 ml-8">
+                                                <BadgeCheckIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                                <div className="ml-3">
+                                                    {subList.description}
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                             ))
                         }
