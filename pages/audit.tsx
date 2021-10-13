@@ -78,22 +78,42 @@ const Audit: NextPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full xl:w-2/5 h-80 xl:h-full mt-4 xl:mt-0 flex justify-center items-center" style={{ backgroundColor: "hsla(97, 42%, 36%, 0.3)" }}>
-                <div className="hidden xl:flex justify-center items-center border-4 border-solid" style={{ borderColor: "hsla(97, 42%, 36%, 1)" }}>
-                    <Image
-                        src="/audit.png"
-                        alt="Audit Process Flow"
-                        width={500}
-                        height={300}
-                    ></Image>
+            <div className="w-full xl:w-2/5 h-full mt-4 xl:mt-0 py-4 xl:py-0 flex justify-center items-center" style={{ backgroundColor: "hsla(97, 42%, 36%, 0.1)" }}>
+                <div className="h-full flex flex-col justify-around">
+                    <div className="hidden xl:flex justify-center items-center">
+                        <Image
+                            src="/search.png"
+                            alt="Person with magnifying glass"
+                            width={280}
+                            height={262}
+                        ></Image>
+                    </div>
+                    <div className="hidden xl:flex justify-center items-center">
+                        <Image
+                            src="/audit.png"
+                            alt="Audit Process Flow"
+                            width={500}
+                            height={300}
+                        ></Image>
+                    </div>
                 </div>
-                <div className="flex xl:hidden justify-center items-center border-8 border-solid" style={{ borderColor: "hsla(97, 42%, 36%, 1)" }}>
-                    <Image
-                        src="/audit.png"
-                        alt="Audit Process Flow"
-                        width={350}
-                        height={210}
-                    ></Image>
+                <div className="h-full flex flex-col justify-around">
+                    <div className="flex xl:hidden justify-center items-center">
+                        <Image
+                            src="/search.png"
+                            alt="Person with magnifying glass"
+                            width={232}
+                            height={217}
+                        ></Image>
+                    </div>
+                    <div className="flex xl:hidden justify-center items-center mt-4">
+                        <Image
+                            src="/audit.png"
+                            alt="Audit Process Flow"
+                            width={350}
+                            height={210}
+                        ></Image>
+                    </div>
                 </div>
             </div>
         </main>
