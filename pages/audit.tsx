@@ -5,26 +5,33 @@ import { AuditList } from "../models/List"
 
 const titlesList: AuditList[] = [
     {
-        title: <span>Quick first-line review of Experiences&#44; Thoughts and Feelings</span>,
+        title: 'Quick first-line assessment',
         children: [
             {
-                title: 'Questionnaire Administration – Analysis – Report – Presentation.'
+                title: 'Online questionnaire administration'
             },
             {
-                title: 'May be used to take immediate improvement actions and/or identify where in-depth audits are required.'
+                title: 'Analysis & report'
+            },
+            {
+                title: 'Presentation'
             }
         ]
     },
     {
-        title: 'In-depth audit',
-        header: <span> of the various components in the client&apos;s performance value chain&#44; with a substantive report and recommendations to enable great performance</span>,
+        title: 'In-depth audit of the various components of the performance management value chain',
         children: [
             {
-                title: <span>Can be on selective components of the entire value chain&#44; </span>,
-                header: ' OR'
+                title: <span>End-to-end of entire value chain <span className="font-bold">OR</span> Selected/targeted components</span>
             },
             {
-                title: 'End-to-end analysis of all components in the entire value chain.'
+                title: 'Interviews & Systems reviews'
+            },
+            {
+                title: 'Analysis & report'
+            },
+            {
+                title: 'Presentation'
             }
         ]
     }
@@ -44,12 +51,9 @@ const Audit: NextPage = () => {
                         </div>
                     </div>
 
-                    <div className="mt-5 text-xl font-lato">
+                    <div className="mt-5 text-2xl font-lato">
                         <div className="font-bold">
-                            Supporting Implementation of targeted&#44; integrated and comprehensive improvements
-                        </div>
-                        <div className="font-medium">
-                            Delsco&#44; through projects management approach&#44; will undertake two levels of &lsquo;health&rsquo; check of the performance management value chain to guide the improvement decisions
+                            Setting the foundation for leapfrog improvements and growth
                         </div>
                     </div>
 
@@ -78,42 +82,22 @@ const Audit: NextPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full xl:w-2/5 h-full mt-4 xl:mt-0 py-4 xl:py-0 flex justify-center items-center" style={{ backgroundColor: "hsla(97, 42%, 36%, 0.1)" }}>
-                <div className="h-full flex flex-col justify-around">
-                    <div className="hidden xl:flex justify-center items-center">
-                        <Image
-                            src="/search.png"
-                            alt="Person with magnifying glass"
-                            width={280}
-                            height={262}
-                        ></Image>
-                    </div>
-                    <div className="hidden xl:flex justify-center items-center">
-                        <Image
-                            src="/audit.png"
-                            alt="Audit Process Flow"
-                            width={500}
-                            height={300}
-                        ></Image>
-                    </div>
+            <div className="w-full xl:w-2/5 h-72 xl:h-full mt-4 xl:mt-0 flex justify-center items-center" style={{ backgroundColor: "hsla(97, 42%, 36%, 0.1)" }}>
+                <div className="hidden xl:flex justify-center items-center border-4 border-solid" style={{ backgroundColor: "hsla(97, 42%, 36%, 0.3)" }}>
+                    <Image
+                        src="/search.png"
+                        alt="Person with magnifying glass"
+                        width={280}
+                        height={262}
+                    ></Image>
                 </div>
-                <div className="h-full flex flex-col justify-around">
-                    <div className="flex xl:hidden justify-center items-center">
-                        <Image
-                            src="/search.png"
-                            alt="Person with magnifying glass"
-                            width={232}
-                            height={217}
-                        ></Image>
-                    </div>
-                    <div className="flex xl:hidden justify-center items-center mt-4">
-                        <Image
-                            src="/audit.png"
-                            alt="Audit Process Flow"
-                            width={350}
-                            height={210}
-                        ></Image>
-                    </div>
+                <div className="flex xl:hidden justify-center items-center border-4 border-solid" style={{ backgroundColor: "hsla(97, 42%, 36%, 0.3)" }}>
+                    <Image
+                        src="/search.png"
+                        alt="Person with magnifying glass"
+                        width={280}
+                        height={262}
+                    ></Image>
                 </div>
             </div>
         </main>
