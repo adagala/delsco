@@ -1,39 +1,71 @@
 import { NextPage } from "next"
 import Image from 'next/image'
 import { CheckCircleIcon } from '@heroicons/react/solid'
+import { BadgeCheckIcon } from "@heroicons/react/outline"
 import { List } from "../models/List"
 
 const performanceLists: List[] = [
     {
-        title: 'Strategic plan review',
-        description: ' - (Facilitation)'
+        title: 'Setting up for performance management',
+        children: [
+            {
+                title: 'Strategic plan review',
+                description: ' - (Facilitation)'
+            },
+            {
+                title: 'Operations and organisation models',
+                description: ' - (Facilitation)'
+            },
+            {
+                title: 'Job definitions – ',
+                header: 'designed for healthy performance management',
+                description: ' - (Facilitation)'
+            }
+        ]
     },
     {
-        title: 'Organisation business/operations model',
-        description: ' - (Facilitation)'
+        title: 'Performance management system',
+        description: ' - (Customization, Installation, Training, Maintenance)',
+        children: [
+            {
+                title: 'Quality assurance in planning, managing and appraising performance'
+            },
+            {
+                title: 'Supervisor-Performer duo engagements for healthy working relationship'
+            },
+            {
+                title: 'Web-based on cloud platform',
+                header: ' - operate anywhere & anytime'
+            },
+            {
+                title: 'Automates performance-based incentives'
+            }
+        ]
     },
     {
-        title: 'Job definitions',
-        header: '– designed for healthy performance',
-        description: ' - (Facilitation)'
+        title: 'Project management for implementing changes and infrastructures',
+        description: ' - (Facilitation)',
+        children: [
+            {
+                title: 'Enables cohesiveness and management of risks'
+            },
+            {
+                title: 'Benefits from timely gains'
+            }
+        ]
     },
     {
-        title: 'Cloud-based Performance Management System branded PMST',
-        header: ' – designed for efficiency and quality assurance',
-        description: ' - (Customisation, Training, Implementation, Maintenance)'
-    },
-    {
-        title: 'Project management',
-        header: ' - implementing changes and projects',
-        description: ' - (Facilitation)'
-    },
-    {
-        title: 'Job Evalauation',
-        description: ' - (Facilitation)'
-    },
-    {
-        title: 'Salary structure review/development',
-        description: ' - (Facilitation)'
+        title: 'Compensation alignments',
+        children: [
+            {
+                title: 'Job evaluation',
+                description: ' - (Facilitation)'
+            },
+            {
+                title: 'Salary structure review/development',
+                description: ' - (Facilitation)'
+            }
+        ]
     }
 ]
 
@@ -44,19 +76,10 @@ const Performance: NextPage = () => {
                 <div>
                     <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
                         <div className="font-extrabold">
-                            Healthy Performance Management
+                            Healthy Performance Management -
                         </div>
                         <div className="mt-1 text-2xl xl:text-3xl font-semibold">
-                            for Great Performance
-                        </div>
-                    </div>
-
-                    <div className="mt-5 text-xl font-lato">
-                        <div className="font-bold">
-                            Tailor-made performance management solutions
-                        </div>
-                        <div className="font-semibold">
-                            for the critical stages of an organisation’s performance management value-chain; <span className="italic">aimed at enabling a healthy work environment; and includes web-based performance management system.</span>
+                            Comprehensive tailor-made solutions for the value chain
                         </div>
                     </div>
 
@@ -66,7 +89,19 @@ const Performance: NextPage = () => {
                                 <div key={i} className="text-lg flex py-1">
                                     <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
                                     <div className="ml-3">
-                                        {list.title} <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
+                                        <span className="text-2xl font-bold">{list.title}</span> <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
+                                        <div className="font-lato font-normal">
+                                            {
+                                                list.children && list.children?.map((subList, i) => (
+                                                    <div key={i} className="text-lg flex py-1">
+                                                        <BadgeCheckIcon className="flex-shrink-0 h-5 w-5 mt-1 text-red-900" aria-hidden="true" />
+                                                        <div className="ml-3">
+                                                            {subList.title} <span className="italic">{subList.header}</span> <span className="text-red-900 italic">{subList.description}</span>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             ))
