@@ -15,6 +15,12 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const services = [
   {
+    name: 'Professional Audit',
+    description: 'of the Performance Management Value Chain',
+    href: '/audit',
+    icon: SearchIcon
+  },
+  {
     name: 'Healthy Performance Management',
     description: 'for Great Performance',
     href: '/performance',
@@ -31,12 +37,6 @@ const services = [
     description: "Train, Coach and Support to achieve Great Performance",
     href: '/development',
     icon: ViewGridIcon,
-  },
-  {
-    name: 'Professional Audit',
-    description:  'of the Performance Management Value Chain',
-    href: '/audit',
-    icon: SearchIcon
   }
 ]
 
