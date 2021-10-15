@@ -30,10 +30,10 @@ const Contacts: NextPage = () => {
                             Contacts
                         </div>
                         <div className="my-1">
-                            +254 798 491899
+                            <a className="hover:underline hover:text-red-900" href="tel:254798491899">+254 798 491899</a>
                         </div>
                         <div className="my-1">
-                            support@delscokenya.com
+                            <a className="hover:underline hover:text-red-900" target="_blank" href="mailto:support@delscokenya.com" rel="noreferrer">support@delscokenya.com</a>
                         </div>
                     </div>
                 </div>
