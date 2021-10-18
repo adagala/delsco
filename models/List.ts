@@ -1,7 +1,7 @@
 export interface List {
     title?: any;
     header?: string;
-    description?: string;
+    description?: any;
     children?: List[];
 }
 
