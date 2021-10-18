@@ -1,14 +1,35 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Layout from '../components/layout'
+import { AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
+
+// The handler to smoothly scroll to the element into view
+const handExitComplete = (): void => {
+  if (typeof window !== 'undefined') {
+    const hashId = window.location.hash 
+    console.log({ location: window.location, hashId })
+
+    if (hashId) {
+      const element = document.querySelector(hashId)
+      console.log({ element })
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    }
+  }
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   return (
-    <div className="flex flex-col h-screen bg-white">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </div>
+    <AnimatePresence exitBeforeEnter onExitComplete={handExitComplete}>
+      <Component {...pageProps} key={router.route} />
+    </AnimatePresence>
   )
 }
 export default MyApp
