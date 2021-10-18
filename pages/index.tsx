@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
+import Layout from '../components/layout'
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Layout>
       <main className="xl:relative grid grid-cols-1 xl:grid-cols-5 h-full" style={{ backgroundColor: "#F6F6F6" }}>
         <div className="px-5 flex items-center col-span-2">
           <div className="w-full grid grid-cols-1 place-items-center text-4xl">
@@ -42,7 +43,7 @@ const Home: NextPage = () => {
           We lead people with <span className="font-extrabold text-3xl xl:text-4xl">thoughts</span> and <span className="font-extrabold text-3xl xl:text-4xl">feelings</span> just like us
         </div>
       </main>
-    </>
+    </Layout>
   )
 }
 
