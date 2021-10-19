@@ -30,7 +30,7 @@ const aboutList: List[] = [
 
 const About: NextPage = () => {
     return (
-        <Layout>
+        <Layout title="About">
             <main className="flex flex-col-reverse px-2 xl:flex-row xl:h-full">
                 <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                     <div>

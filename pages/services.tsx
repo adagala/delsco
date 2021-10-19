@@ -150,7 +150,7 @@ const developmentLists: List[] = [
 
 const Services: NextPage = () => {
     return (
-        <Layout>
+        <Layout title="Services">
             <main>
                 <section id="audit" className="flex flex-col-reverse xl:flex-row px-2 w-full">
                     <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">

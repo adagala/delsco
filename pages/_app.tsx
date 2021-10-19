@@ -6,12 +6,10 @@ import { useRouter } from 'next/router'
 // The handler to smoothly scroll to the element into view
 const handExitComplete = (): void => {
   if (typeof window !== 'undefined') {
-    const hashId = window.location.hash 
-    console.log({ location: window.location, hashId })
+    const hashId = window.location.hash
 
     if (hashId) {
       const element = document.querySelector(hashId)
-      console.log({ element })
 
       if (element) {
         element.scrollIntoView({

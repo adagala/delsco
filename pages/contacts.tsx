@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 
 const Contacts: NextPage = () => {
     return (
-        <Layout>
+        <Layout title="Contacts">
             <main className="h-full font-lato bg-gradient-to-b from-red-900 border-t border-solid" >
                 <div className="h-full flex flex-col xl:flex-row items-center justify-around">
                     <div className="h-72 w-80 mt-4 xl:-mt-36 flex justify-center shadow-xl bg-white">
