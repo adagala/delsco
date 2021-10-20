@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <Layout title="Home">
       <main className="hidden xl:flex h-full justify-center items-center bg-red-900">
-        <div className="relative bg-gray-100" style={{ height: '500px', width: '900px' }}>
+        <div className="relative bg-gray-100" style={{ height: '495px', width: '900px' }}>
           <Image
             src="/home.jpg"
             alt="Delsco Enterprises Performance Logo"
