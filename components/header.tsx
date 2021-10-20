@@ -65,10 +65,10 @@ const Header = ({ title }: { title: string }) => {
                 <a>
                   <span className="sr-only">Delsco Enterprises</span>
                   <Image
-                    src="/logo-performance.png"
+                    src="/logo.jpg"
                     alt="Delsco Enterprises Performance Logo"
-                    width={120}
-                    height={47}
+                    width={140}
+                    height={61}
                   />
                 </a>
               </Link>
@@ -173,10 +173,10 @@ const Header = ({ title }: { title: string }) => {
                       <a>
                         <span className="sr-only">Delsco Enterprises</span>
                         <Image
-                          src="/logo-performance.png"
+                          src="/logo.jpg"
                           alt="Delsco Enterprises Performance Logo"
                           width={120}
-                          height={47}
+                          height={53}
                         />
                       </a>
                     </Link>
