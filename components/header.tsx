@@ -179,8 +179,8 @@ const Header = ({ title }: { title: string }) => {
                         <Image
                           src="/logo.jpg"
                           alt="Delsco Enterprises Performance Logo"
-                          width={120}
-                          height={53}
+                          width={140}
+                          height={61}
                         />
                       </a>
                     </Link>
