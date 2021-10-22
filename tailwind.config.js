@@ -7,7 +7,8 @@ module.exports = {
       'times-new-roman': ['Times New Roman', 'ui-serif'],
       'roboto': ['Roboto', 'ui-sans-serif'],
       'lato': ['Lato', 'sans-serif'],
-      'work-sans': ['Work Sans', 'sans-serif']
+      'work-sans': ['Work Sans', 'sans-serif'],
+      'arial-black': ['Arial Black', 'ui-sans-serif'],
     },
     extend: {},
   },
