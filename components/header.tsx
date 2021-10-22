@@ -58,13 +58,14 @@ const Header = ({ title }: { title: string }) => {
       </Head>
 
       <Popover className="relative bg-red-900 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex justify-between items-center border-b-2 border-red-900 py-2 md:justify-start md:space-x-10">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
+        <div className="max-w-7xl">
+          <div className="flex justify-between items-center border-red-900">
+            <div className="">
               <Link href="/">
                 <a>
                   <span className="sr-only">Delsco Enterprises</span>
                   <Image
+                    className=""
                     src="/logo.jpg"
                     alt="Delsco Enterprises Performance Logo"
                     width={140}
@@ -149,7 +150,7 @@ const Header = ({ title }: { title: string }) => {
                 </a>
               </Link>
             </Popover.Group>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <div className="hidden md:flex items-center justify-end">
               &nbsp;
             </div>
           </div>
