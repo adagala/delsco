@@ -18,14 +18,9 @@ const Home: NextPage = () => {
           <div className="absolute h-8 -mt-4 z-10 top-1/2 w-1/3 flex items-center justify-center">
             <div className="w-full grid grid-cols-1 place-items-center text-4xl">
               <div className="text-center font-times-new-roman">
-                <div>
-                  Welcome to the
-                </div>
-                <div>
-                  home of
-                </div>
+                The home of
               </div>
-              <div className="text-center font-black font-arial">
+              <div className="text-center font-arial-black">
                 Performance Management Solutions
               </div>
             </div>
@@ -35,13 +30,13 @@ const Home: NextPage = () => {
               <div className="text-center font-times-new-roman">
                 Think
               </div>
-              <div className="text-center font-black font-arial">
+              <div className="text-center font-arial-black">
                 &lsquo;Healthy Performance Management&rsquo;
               </div>
             </div>
           </div>
-          <div className="px-5 w-full text-2xl xl:text-3xl font-normal mt-5 xl:absolute bottom-0 text-center xl:mt-0 xl:mb-2 font-lato">
-            We lead people with <span className="font-extrabold text-3xl xl:text-4xl">thoughts</span> and <span className="font-extrabold text-3xl xl:text-4xl">feelings</span> just like us
+          <div className="px-5 w-full text-3xl font-normal absolute bottom-8 text-center mb-2 font-times-new-roman">
+            Welcome
           </div>
         </div>
       </main>
@@ -56,7 +51,7 @@ const Home: NextPage = () => {
                 home of
               </div>
             </div>
-            <div className="text-center font-black font-arial">
+            <div className="text-center font-arial-black">
               Performance Management Solutions
             </div>
           </div>
@@ -66,13 +61,10 @@ const Home: NextPage = () => {
             <div className="text-center font-times-new-roman">
               Think
             </div>
-            <div className="text-center font-black font-arial">
+            <div className="text-center font-arial-black">
               &lsquo;Healthy Performance Management&rsquo;
             </div>
           </div>
-        </div>
-        <div className="px-5 w-full text-2xl xl:text-3xl font-normal mt-5 xl:absolute bottom-0 text-center xl:mt-0 xl:mb-2 font-lato">
-          We lead people with <span className="font-extrabold text-3xl xl:text-4xl">thoughts</span> and <span className="font-extrabold text-3xl xl:text-4xl">feelings</span> just like us
         </div>
       </main>
     </Layout>
