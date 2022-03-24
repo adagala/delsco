@@ -9,11 +9,18 @@ import {
   MenuIcon,
   ViewGridIcon,
   XIcon,
-  SearchIcon
+  SearchIcon,
+  CubeIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const services = [
+  {
+    name: 'PMST',
+    description: 'Performance Management Structuring Tool',
+    href: 'pmst',
+    icon: CubeIcon
+  },
   {
     name: 'Professional Audit',
     description: 'of the Performance Management Value Chain',
