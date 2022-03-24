@@ -17,25 +17,25 @@ const services = [
   {
     name: 'Professional Audit',
     description: 'of the Performance Management Value Chain',
-    href: 'services#audit',
+    href: 'audit',
     icon: SearchIcon
   },
   {
     name: 'Healthy Performance Management',
     description: 'for Great Performance',
-    href: 'services#performance',
+    href: 'performance',
     icon: ChartBarIcon,
   },
   {
     name: 'Staff Outsourcing',
     description: 'for Capacity Management and Seamless Quality of Service',
-    href: 'services#outsourcing',
+    href: 'outsourcing',
     icon: CursorClickIcon,
   },
   {
     name: 'Learning and Skills Development',
     description: "Train, Coach and Support to achieve Great Performance",
-    href: 'services#development',
+    href: 'development',
     icon: ViewGridIcon,
   }
 ]
