@@ -9,33 +9,40 @@ import {
   MenuIcon,
   ViewGridIcon,
   XIcon,
-  SearchIcon
+  SearchIcon,
+  CubeIcon
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const services = [
   {
+    name: 'PMST',
+    description: 'Performance Management Structuring Tool',
+    href: 'pmst',
+    icon: CubeIcon
+  },
+  {
     name: 'Professional Audit',
     description: 'of the Performance Management Value Chain',
-    href: 'services#audit',
+    href: 'audit',
     icon: SearchIcon
   },
   {
     name: 'Healthy Performance Management',
     description: 'for Great Performance',
-    href: 'services#performance',
+    href: 'performance',
     icon: ChartBarIcon,
   },
   {
     name: 'Staff Outsourcing',
     description: 'for Capacity Management and Seamless Quality of Service',
-    href: 'services#outsourcing',
+    href: 'outsourcing',
     icon: CursorClickIcon,
   },
   {
     name: 'Learning and Skills Development',
     description: "Train, Coach and Support to achieve Great Performance",
-    href: 'services#development',
+    href: 'development',
     icon: ViewGridIcon,
   }
 ]
