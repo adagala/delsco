@@ -155,7 +155,7 @@ const Services: NextPage = () => {
                 <section id="audit" className="flex flex-col-reverse xl:flex-row px-2 w-full">
                     <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                         <div>
-                            <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
+                            <div className="text-3xl xl:text-4xl font-work-sans text-delsco-500">
                                 <div className="font-extrabold">
                                     Professional Audit
                                 </div>
@@ -180,7 +180,7 @@ const Services: NextPage = () => {
                                                     {
                                                         list.children && list.children?.map((subList, i) => (
                                                             <div key={i} className="text-lg flex py-1">
-                                                                <ArrowCircleRightIcon className="flex-shrink-0 h-5 w-5 mt-1 text-red-900" aria-hidden="true" />
+                                                                <ArrowCircleRightIcon className="flex-shrink-0 h-5 w-5 mt-1 text-delsco-500" aria-hidden="true" />
                                                                 <div className="ml-3">
                                                                     {subList.title} <span className="font-extrabold">{subList.header}</span>
                                                                 </div>
@@ -218,7 +218,7 @@ const Services: NextPage = () => {
                 <section id="performance" className="flex flex-col-reverse px-2 xl:flex-row-reverse xl:h-full">
                     <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-100">
                         <div>
-                            <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
+                            <div className="text-3xl xl:text-4xl font-work-sans text-delsco-500">
                                 <div className="font-extrabold">
                                     Healthy Performance Management -
                                 </div>
@@ -231,16 +231,16 @@ const Services: NextPage = () => {
                                 {
                                     performanceLists.map((list, i) => (
                                         <div key={i} className="text-lg flex py-1">
-                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-delsco-500" aria-hidden="true" />
                                             <div className="ml-3">
-                                                <span className="text-2xl font-bold">{list.title}</span> <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
+                                                <span className="text-2xl font-bold">{list.title}</span> <span className="italic">{list.header}</span> <span className="text-delsco-500 italic">{list.description}</span>
                                                 <div className="font-lato font-normal">
                                                     {
                                                         list.children && list.children?.map((subList, i) => (
                                                             <div key={i} className="text-lg flex py-1">
-                                                                <BadgeCheckIcon className="flex-shrink-0 h-5 w-5 mt-1 text-red-900" aria-hidden="true" />
+                                                                <BadgeCheckIcon className="flex-shrink-0 h-5 w-5 mt-1 text-delsco-500" aria-hidden="true" />
                                                                 <div className="ml-3">
-                                                                    {subList.title} <span className="italic">{subList.header}</span> <span className="text-red-900 italic">{subList.description}</span>
+                                                                    {subList.title} <span className="italic">{subList.header}</span> <span className="text-delsco-500 italic">{subList.description}</span>
                                                                 </div>
                                                             </div>
                                                         ))
@@ -276,7 +276,7 @@ const Services: NextPage = () => {
                 <section id="outsourcing" className="flex flex-col-reverse px-2 xl:flex-row w-full">
                     <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                         <div>
-                            <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
+                            <div className="text-3xl xl:text-4xl font-work-sans text-delsco-500">
                                 <div className="font-bold">
                                     Staff Outsourcing
                                 </div>
@@ -298,9 +298,9 @@ const Services: NextPage = () => {
                                 {
                                     outsourcingLists.map((list) => (
                                         <div key={list.title} className="text-lg flex py-1">
-                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-delsco-500" aria-hidden="true" />
                                             <div className="ml-3">
-                                                {list.title} <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
+                                                {list.title} <span className="italic">{list.header}</span> <span className="text-delsco-500 italic">{list.description}</span>
                                             </div>
                                         </div>
                                     ))
@@ -331,7 +331,7 @@ const Services: NextPage = () => {
                 <section id="development" className="flex flex-col-reverse px-2 xl:flex-row-reverse xl:h-full">
                     <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-100">
                         <div>
-                            <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
+                            <div className="text-3xl xl:text-4xl font-work-sans text-delsco-500">
                                 <div className="font-bold">
                                     Learning and Skills Development
                                 </div>
@@ -344,9 +344,9 @@ const Services: NextPage = () => {
                                 {
                                     developmentLists.map((list) => (
                                         <div key={list.title} className="text-lg flex py-1">
-                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-delsco-500" aria-hidden="true" />
                                             <div className="ml-3">
-                                                <span className="font-bold">{list.title}</span> <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
+                                                <span className="font-bold">{list.title}</span> <span className="italic">{list.header}</span> <span className="text-delsco-500 italic">{list.description}</span>
                                             </div>
                                         </div>
                                     ))

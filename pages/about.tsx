@@ -35,10 +35,10 @@ const About: NextPage = () => {
                 <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                     <div>
                         <div className="text-3xl xl:text-4xl">
-                            <div className="font-work-sans text-red-900">
+                            <div className="font-work-sans text-delsco-500">
                                 Delsco is in the business of
                             </div>
-                            <div className="mt-2 font-bold font-work-sans text-red-900">
+                            <div className="mt-2 font-bold font-work-sans text-delsco-500">
                                 &lsquo;Enabling Performance&rsquo;
                             </div>
                         </div>
@@ -47,7 +47,7 @@ const About: NextPage = () => {
                                 aboutList.map((list) => (
                                     <div key={list.description} >
                                         <div className="text-lg flex py-1">
-                                            <ShieldCheckIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                            <ShieldCheckIcon className="flex-shrink-0 mt-1 h-6 w-6 text-delsco-500" aria-hidden="true" />
                                             <div className="ml-3">
                                                 {list.description}
                                             </div>
@@ -55,7 +55,7 @@ const About: NextPage = () => {
                                         {
                                             list?.children && list?.children?.map((subList, i) => (
                                                 <div key={i} className="text-lg flex py-1 ml-8">
-                                                    <BadgeCheckIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                                    <BadgeCheckIcon className="flex-shrink-0 mt-1 h-6 w-6 text-delsco-500" aria-hidden="true" />
                                                     <div className="ml-3">
                                                         {subList.description}
                                                     </div>

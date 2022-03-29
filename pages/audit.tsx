@@ -46,7 +46,7 @@ const Audit: NextPage = () => {
                 <section className="flex flex-col-reverse xl:flex-row px-2 w-full">
                     <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                         <div>
-                            <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
+                            <div className="text-3xl xl:text-4xl font-work-sans text-delsco-500">
                                 <div className="font-extrabold">
                                     Professional Audit
                                 </div>
@@ -71,7 +71,7 @@ const Audit: NextPage = () => {
                                                     {
                                                         list.children && list.children?.map((subList, i) => (
                                                             <div key={i} className="text-lg flex py-1">
-                                                                <ArrowCircleRightIcon className="flex-shrink-0 h-5 w-5 mt-1 text-red-900" aria-hidden="true" />
+                                                                <ArrowCircleRightIcon className="flex-shrink-0 h-5 w-5 mt-1 text-delsco-500" aria-hidden="true" />
                                                                 <div className="ml-3">
                                                                     {subList.title} <span className="font-extrabold">{subList.header}</span>
                                                                 </div>

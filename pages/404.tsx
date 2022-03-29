@@ -6,7 +6,7 @@ const Custom404: NextPage = () => {
         <Layout title="Error 404">
             <main className="h-full font-work-sans border-t border-solid" >
                 <div className="h-full flex items-center justify-center">
-                    <div className="px-4 text-6xl font-extrabold text-red-900">
+                    <div className="px-4 text-6xl font-extrabold text-delsco-500">
                         404
                     </div>
                     <div className="border-l px-4">
