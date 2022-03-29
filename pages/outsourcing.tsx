@@ -28,7 +28,7 @@ const Outsourcing: NextPage = () => {
                 <section className="flex flex-col-reverse px-2 xl:flex-row w-full">
                     <div className="flex items-center mt-6 xl:mt-0 px-2 xl:p-10 w-full xl:w-3/5 bg-gray-50">
                         <div>
-                            <div className="text-3xl xl:text-4xl font-work-sans text-red-900">
+                            <div className="text-3xl xl:text-4xl font-work-sans text-delsco-500">
                                 <div className="font-bold">
                                     Staff Outsourcing
                                 </div>
@@ -50,9 +50,9 @@ const Outsourcing: NextPage = () => {
                                 {
                                     outsourcingLists.map((list) => (
                                         <div key={list.title} className="text-lg flex py-1">
-                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-red-900" aria-hidden="true" />
+                                            <CheckCircleIcon className="flex-shrink-0 mt-1 h-6 w-6 text-delsco-500" aria-hidden="true" />
                                             <div className="ml-3">
-                                                {list.title} <span className="italic">{list.header}</span> <span className="text-red-900 italic">{list.description}</span>
+                                                {list.title} <span className="italic">{list.header}</span> <span className="text-delsco-500 italic">{list.description}</span>
                                             </div>
                                         </div>
                                     ))

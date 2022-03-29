@@ -28,7 +28,7 @@ const ScrollToTop = (): JSX.Element => {
             {isVisible && (
                 <div
                     onClick={scrollToTop}
-                    className='fixed p-2 border border-solid border-white rounded-lg bg-red-900 bottom-3 right-3 lg:bottom-5 lg:right-5 cursor-pointer'
+                    className='fixed p-2 border border-solid border-white rounded-lg bg-delsco-500 bottom-3 right-3 lg:bottom-5 lg:right-5 cursor-pointer'
                 >
                     <ChevronDoubleUpIcon className="flex-shrink-0 h-6 w-6 text-white" />
                 </div>

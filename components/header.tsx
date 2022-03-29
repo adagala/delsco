@@ -68,7 +68,7 @@ const Header = ({ title }: { title: string }) => {
         </style>
       </Head>
 
-      <Popover className="relative bg-red-900 z-50">
+      <Popover className="relative bg-delsco-500 z-50">
         <div className="max-w-7xl mx-auto xl:mx-0 px-4 sm:px-0">
           <div className="flex justify-between items-center border-red-900 py-2 xl:py-0">
             <div className="">
@@ -85,7 +85,7 @@ const Header = ({ title }: { title: string }) => {
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-red-900 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500">
+              <Popover.Button className="bg-delsco-500 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -108,7 +108,7 @@ const Header = ({ title }: { title: string }) => {
                     <Popover.Button
                       className={classNames(
                         open ? 'text-gray-400' : 'text-white',
-                        'group bg-red-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-400 focus:outline-none'
+                        'group bg-delsco-500 rounded-md inline-flex items-center text-base font-medium hover:text-gray-400 focus:outline-none'
                       )}
                     >
                       <span>Services</span>
@@ -132,7 +132,7 @@ const Header = ({ title }: { title: string }) => {
                     >
                       <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-red-900 px-5 py-6 sm:gap-8 sm:p-8">
+                          <div className="relative grid gap-6 bg-delsco-500 px-5 py-6 sm:gap-8 sm:p-8">
                             {services.map((item) => (
                               <Popover.Button key={item.name}>
                                 <Link key={item.name} href={item.href}>
@@ -176,7 +176,7 @@ const Header = ({ title }: { title: string }) => {
           leaveTo="opacity-0 scale-95"
         >
           <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div className="rounded-lg shadow-lg ring-1 ring-white ring-opacity-5 bg-red-900 divide-y-2 divide-gray-50">
+            <div className="rounded-lg shadow-lg ring-1 ring-white ring-opacity-5 bg-delsco-500 divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
@@ -193,7 +193,7 @@ const Header = ({ title }: { title: string }) => {
                     </Link>
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-red-900 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <Popover.Button className="bg-delsco-500 rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>

@@ -10,8 +10,8 @@ const Contacts: NextPage = () => {
                 <div className="h-full flex flex-col xl:flex-row items-center justify-around">
                     <div className="h-72 w-80 mt-4 xl:-mt-36 flex justify-center shadow-xl bg-white">
                         <div className="flex flex-col justify-center items-center">
-                            <OfficeBuildingIcon className="h-11 w-11 text-red-900" />
-                            <div className="my-1 text-red-900 font-work-sans font-bold text-lg">
+                            <OfficeBuildingIcon className="h-11 w-11 text-delsco-500" />
+                            <div className="my-1 text-delsco-500 font-work-sans font-bold text-lg">
                                 Physical Address
                             </div>
                             <div className="my-1">
@@ -27,22 +27,22 @@ const Contacts: NextPage = () => {
                     </div>
                     <div className="h-72 w-80 mt-4 xl:mt-10 flex justify-center shadow-xl bg-white">
                         <div className="flex flex-col justify-center items-center">
-                            <PhoneIcon className="h-11 w-11 text-red-900" />
-                            <div className="my-1 text-red-900 font-work-sans font-bold text-lg">
+                            <PhoneIcon className="h-11 w-11 text-delsco-500" />
+                            <div className="my-1 text-delsco-500 font-work-sans font-bold text-lg">
                                 Contacts
                             </div>
                             <div className="my-1">
-                                <a className="hover:underline hover:text-red-900" href="tel:254798491899">+254 798 491899</a>
+                                <a className="hover:underline hover:text-delsco-500" href="tel:254798491899">+254 798 491899</a>
                             </div>
                             <div className="my-1">
-                                <a className="hover:underline hover:text-red-900" target="_blank" href="mailto:support@delscokenya.com" rel="noreferrer">support@delscokenya.com</a>
+                                <a className="hover:underline hover:text-delsco-500" target="_blank" href="mailto:support@delscokenya.com" rel="noreferrer">support@delscokenya.com</a>
                             </div>
                         </div>
                     </div>
                     <div className="h-72 w-80 mt-4 mb-4 xl:-mt-36 xl:mb-0 xl:border-b xl:border-solid flex justify-center shadow-xl bg-white">
                         <div className="flex flex-col justify-center items-center">
-                            <InboxInIcon className="h-11 w-11 text-red-900" />
-                            <div className="my-1 text-red-900 font-work-sans font-bold text-lg">
+                            <InboxInIcon className="h-11 w-11 text-delsco-500" />
+                            <div className="my-1 text-delsco-500 font-work-sans font-bold text-lg">
                                 Postal Address
                             </div>
                             <div className="my-1">
