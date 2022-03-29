@@ -132,7 +132,7 @@ const PMST: NextPage = () => {
                     </div>
                     <div className="mt-6">
                         <a
-                            href="https://www.pmst.delscokenya.com"
+                            href="https://pmst.delscokenya.com"
                             target='_blank'
                             rel='noreferrer'
                             className="w-full flex items-center justify-center px-8 py-1 border border-transparent text-base font-medium rounded-md text-delsco-500 bg-delsco-100 hover:bg-delsco-200 md:py-2 md:px-6"
