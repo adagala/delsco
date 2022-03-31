@@ -1,4 +1,3 @@
-import { CheckIcon } from '@heroicons/react/outline';
 import { NextPage } from 'next'
 import Layout from '../components/layout'
 
@@ -107,16 +106,9 @@ const CapacityLevels: ICapacityLevel[] = [
     }
 ]
 
-const currencyFormatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'KES'
-});
-
-const percentageSavings = (pricing: IPricing) => {
-    const quarterlyTotal = pricing.quarterly * 4;
-    const saving = quarterlyTotal - pricing.yearly;
-    const percentageSaving = (saving / quarterlyTotal) * 100;
-    return `${Math.round(percentageSaving)}%`;
+const priceFormatter = (price: number) => {
+    const formattedPrice = Math.round(price * 100) / 100
+    return formattedPrice.toLocaleString('en-US', { maximumFractionDigits: 2 })
 }
 
 const PMST: NextPage = () => {
@@ -140,52 +132,43 @@ const PMST: NextPage = () => {
                             View PMST
                         </a>
                     </div>
-                    <div className="mt-6 text-2xl xl:text-3xl font-semibold underline underline-offset-2 cursor-pointer">
-                        Plans & Pricing
+                    <div className="mt-4 text-2xl xl:text-3xl font-semibold underline underline-offset-2 cursor-pointer">
+                        Pricing Structure
                     </div>
                 </section>
-                <section className='grid grid-cols-1 gap-2 mx-10 md:grid-cols-3 md:gap-3 md:mx-10 lg:grid-cols-4 lg:gap-4 lg:mx-10 mt-4'>
-                    {CapacityLevels.map((capacity) => (
-                        <div key={capacity.level} className='shadow-xl border rounded-md px-4 text-center py-10 my-3 cursor-pointer transition ease-linear delay-75 hover:-translate-y-1 hover:scale-105 duration-100 hover:border-delsco-500'>
-                            <div className='pt-2 text-lg'>
-                                Capacity Level
-                            </div>
-                            <div className='pb-2 text-3xl font-bold text-delsco-500'>
-                                {capacity.level}
-                            </div>
-                            <div className='py-3 border border-delsco-500 rounded'>
-                                <span className='text-delsco-500 text-md font-semibold'>
-                                    {currencyFormatter.format(capacity.price.quarterly)}
-                                </span> / quarter
-                            </div>
-                            <div className='py-2 text-gray-800'>
-                                <div className='pt-1'>
-                                    Or prepay annually
-                                </div>
-                                <div className='pb-1'>
-                                    (save {percentageSavings(capacity.price)})
-                                </div>
-                                <div className='py-1'>
-                                    <span className='text-delsco-500 text-md font-semibold'>
-                                        {currencyFormatter.format(capacity.price.yearly)}
-                                    </span> / year
-                                </div>
-                            </div>
-                            <div className='mt-2 pt-4 border-t border-t-gray-300 flex items-center'>
-                                <CheckIcon className="flex-shrink-0 mr-2 h-5 w-5 text-delsco-500" aria-hidden="true" />
-                                {
-                                    capacity.level < 7 ?
-                                        <span>
-                                            Maximum of <span className='font-bold'> {capacity.employeesLimit} </span> employees
-                                        </span>
-                                        :
-                                        <span>
-                                            Unlimited employees
-                                        </span>
-                                }
-                            </div>
-                        </div>
-                    ))}
+                <section className='md:flex md:justify-center mt-4 overflow-x-auto'>
+                    <table className='mx-2 md:mx-0'>
+                        <thead className='uppercase text-center text-delsco-500 bg-delsco-100'>
+                            <tr className=''>
+                                <th className='px-6 py-1.5 border border-gray-500' rowSpan={2}>Capacity Levels</th>
+                                <th className='px-6 py-1.5 border border-gray-500' rowSpan={2}>Max. Employees</th>
+                                <th className='px-6 py-1.5 border border-gray-500' colSpan={2}>Annual License Fees</th>
+                            </tr>
+                            <tr className=''>
+                                <th className='px-6 py-1.5 border border-gray-500'>Annually</th>
+                                <th className='px-6 py-1.5 border border-gray-500'>Quarterly</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {CapacityLevels.map((capacity) => (
+                                <tr key={capacity.level} className='hover:bg-gray-100 cursor-pointer'>
+                                    <td className='px-6 py-1 border border-gray-500'>Level {capacity.level}</td>
+                                    <td className='text-right px-6 py-1 border border-gray-500'>
+                                        {
+                                            capacity.level < 7 ?
+                                                capacity.employeesLimit
+                                                :
+                                                <span>
+                                                    Unlimited
+                                                </span>
+                                        }
+                                    </td>
+                                    <td className='text-right px-6 py-1 border border-gray-500'>{priceFormatter(capacity.price.yearly)}</td>
+                                    <td className='text-right px-6 py-1 border border-gray-500'>{priceFormatter(capacity.price.quarterly)}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </section>
             </main >
         </Layout >
