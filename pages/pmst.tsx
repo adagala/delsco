@@ -142,7 +142,7 @@ const PMST: NextPage = () => {
                             <tr className=''>
                                 <th className='px-6 py-1.5 border border-gray-500' rowSpan={2}>Capacity Levels</th>
                                 <th className='px-6 py-1.5 border border-gray-500' rowSpan={2}>Max. Employees</th>
-                                <th className='px-6 py-1.5 border border-gray-500' colSpan={2}>Annual License Fees</th>
+                                <th className='px-6 py-1.5 border border-gray-500' colSpan={2}>Annual License Fees (KES)</th>
                             </tr>
                             <tr className=''>
                                 <th className='px-6 py-1.5 border border-gray-500'>Annually</th>
