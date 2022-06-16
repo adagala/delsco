@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: "Arial Black";
-        font-weight: 900;
-        src: url('/fonts/ariblk.ttf') format('ttf')
-    }
+  @font-face {
+    font-family: "Arial Black";
+    font-weight: 900;
+    src: url("/fonts/ariblk.ttf") format("ttf");
+  }
+}
+
+* {
+  opacity: 0;
 }
