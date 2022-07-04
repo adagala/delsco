@@ -1,33 +1,12 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { AnimatePresence } from 'framer-motion'
-import { useRouter } from 'next/router'
+import "../styles/globals.css";
 
-// The handler to smoothly scroll to the element into view
-const handExitComplete = (): void => {
-  if (typeof window !== 'undefined') {
-    const hashId = window.location.hash
-
-    if (hashId) {
-      const element = document.querySelector(hashId)
-
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest'
-        });
-      }
-    }
-  }
-};
-
-function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
+function MyApp() {
   return (
-    <AnimatePresence exitBeforeEnter onExitComplete={handExitComplete}>
-      <Component {...pageProps} key={router.route} />
-    </AnimatePresence>
-  )
+    <div className="h-screen w-full flex items-center justify-center">
+      <div className="font-bold text-3xl text-delsco-500 uppercase text-center">
+        Website Currently Unavailable
+      </div>
+    </div>
+  );
 }
-export default MyApp
+export default MyApp;
